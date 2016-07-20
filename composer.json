@@ -1,0 +1,24 @@
+{
+    "name": "brestrepo/eloquent-composite",
+    "description": "Eloquent model extension",
+    "type": "library",
+    "require": {
+        "illuminate/database": "v4.*",
+        "illuminate/events": "v4.*",
+        "illuminate/container": "v4.*",
+        "illuminate/filesystem": "v4.*",
+        "illuminate/console": "v4.*",
+        "composer/composer": "1.0.*@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "phing/phing": "2.5.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernardo Restrepo",
+            "email": "bernardo.restrepo@gmail.com"
+        }
+    ]
+}
