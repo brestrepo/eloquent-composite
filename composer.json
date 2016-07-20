@@ -1,8 +1,9 @@
 {
     "name": "brestrepo/eloquent-composite",
-    "description": "Eloquent model extension",
+    "description": "Eloquent extension to user composite keys",
     "type": "library",
     "require": {
+        "php": ">=5.4",
         "illuminate/database": "v4.*",
         "illuminate/events": "v4.*",
         "illuminate/container": "v4.*",
@@ -20,5 +21,10 @@
             "name": "Bernardo Restrepo",
             "email": "bernardo.restrepo@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Composite\\Eloquent\\": "src/"
+        }
+    }
 }
