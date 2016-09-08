@@ -17,3 +17,4 @@ To use this library, place the following in your composer.json file:
 ## On this version
 
 - HasManyComposite method
+- BelongToComposite method
