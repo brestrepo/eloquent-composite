@@ -226,7 +226,7 @@ class BelongsToComposite extends Relation
         // and match back onto their children using these keys of the dictionary and
         // the primary key of the children to map them onto the correct instances.
         foreach ($models as $model) {
-            $key = $this->makeCompositeKey($foreign);
+            $key = $this->makeCompositeKeyValues($foreign, $model);
 
             if (isset($dictionary[$key])) {
                 $model->setRelation($relation, $dictionary[$key]);
@@ -263,6 +263,22 @@ class BelongsToComposite extends Relation
 
         foreach ($keys as $keyName) {
             $key[] = $keyName;
+        }
+
+        return implode('+', $key);
+    }
+
+    /**
+     * @param $keys
+     * @param $model
+     * @return mixed
+     */
+    public function makeCompositeKeyValues($keys, $model)
+    {
+        $key = [];
+
+        foreach ($keys as $keyName) {
+            $key[] = $model->{$keyName};
         }
 
         return implode('+', $key);
